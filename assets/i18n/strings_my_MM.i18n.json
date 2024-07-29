@@ -1,13 +1,16 @@
 {
+  "okButton": "အိုကေ",
+  "cancelButton": "ပယ်ဖျက်မည်",
+  "dismissButton": "မလုပ်တော့ပါ",
+  "quitButton": "ထွက်မည်",
+  "updateButton": "အပ်ပဒိတ်",
   "navigationView": {},
   "homeView": {},
   "applicationItem": {},
   "latestCommitCard": {},
   "patcherView": {},
   "appSelectorCard": {},
-  "patchSelectorCard": {
-    "widgetSubtitle": "Chagua programu kwanza"
-  },
+  "patchSelectorCard": {},
   "socialMediaCard": {},
   "appSelectorView": {},
   "patchesSelectorView": {},
