@@ -15,4 +15,4 @@ and let you when an update is available.
 
 The next page will explain how to configure ReVanced Manager.
 
-Continue: [⚙️ Configuring ReVanced Manager](2_5_settings.md)
+Continue: [⚙️ Configuring ReVanced Manager](2_6_settings.md)
