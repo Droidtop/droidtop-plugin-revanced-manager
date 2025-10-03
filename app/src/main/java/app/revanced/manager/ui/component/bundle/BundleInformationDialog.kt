@@ -45,6 +45,7 @@ import app.revanced.manager.domain.bundles.LocalPatchBundle
 import app.revanced.manager.domain.bundles.PatchBundleSource
 import app.revanced.manager.domain.bundles.PatchBundleSource.Extensions.asRemoteOrNull
 import app.revanced.manager.domain.bundles.PatchBundleSource.Extensions.isDefault
+import app.revanced.manager.domain.manager.PreferencesManager
 import app.revanced.manager.domain.repository.PatchBundleRepository
 import app.revanced.manager.ui.component.ColumnWithScrollbar
 import app.revanced.manager.ui.component.ExceptionViewerDialog
@@ -65,12 +66,14 @@ fun BundleInformationDialog(
 ) {
     val bundleRepo = koinInject<PatchBundleRepository>()
     val networkInfo = koinInject<NetworkInfo>()
+    val prefs = koinInject<PreferencesManager>()
     val hasNetwork = remember { networkInfo.isConnected() }
     val composableScope = rememberCoroutineScope()
     var viewCurrentBundlePatches by remember { mutableStateOf(false) }
     val isLocal = src is LocalPatchBundle
     val bundleManifestAttributes = src.patchBundle?.manifestAttributes
-    val (autoUpdate, endpoint) = src.asRemoteOrNull?.let { it.autoUpdate to it.endpoint } ?: (null to null)
+    val (autoUpdate, endpoint) = src.asRemoteOrNull?.let { it.autoUpdate to it.endpoint }
+        ?: (null to null)
 
     fun onAutoUpdateChange(new: Boolean) = composableScope.launch {
         with(bundleRepo) {
@@ -169,6 +172,32 @@ fun BundleInformationDialog(
                         },
                         modifier = Modifier.clickable {
                             onAutoUpdateChange(!autoUpdate)
+                        }
+                    )
+                }
+
+                if (src.isDefault) {
+                    val usePrereleases by prefs.usePatchesPrereleases.getAsState()
+
+                    BundleListItem(
+                        headlineText = stringResource(R.string.patches_prereleases),
+                        supportingText = stringResource(R.string.patches_prereleases_description),
+                        trailingContent = {
+                            HapticSwitch(
+                                checked = usePrereleases,
+                                onCheckedChange = {
+                                    composableScope.launch {
+                                        prefs.usePatchesPrereleases.update(
+                                            it
+                                        )
+                                    }
+                                }
+                            )
+                        },
+                        modifier = Modifier.clickable {
+                            composableScope.launch {
+                                prefs.usePatchesPrereleases.update(!usePrereleases)
+                            }
                         }
                     )
                 }

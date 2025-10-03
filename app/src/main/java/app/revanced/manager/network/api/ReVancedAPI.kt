@@ -35,7 +35,7 @@ class ReVancedAPI(
     suspend fun getLatestAppInfo() =
         request<ReVancedAsset>("manager?prerelease=${prefs.useManagerPrereleases.get()}")
 
-    suspend fun getPatchesUpdate() = request<ReVancedAsset>("patches")
+    suspend fun getPatchesUpdate() = request<ReVancedAsset>("patches?prerelease=${prefs.usePatchesPrereleases.get()}")
 
     suspend fun getContributors() = request<List<ReVancedGitRepository>>("contributors")
 
