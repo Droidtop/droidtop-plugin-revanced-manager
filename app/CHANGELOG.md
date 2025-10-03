@@ -1,3 +1,10 @@
+# app [1.26.0-dev.2](https://github.com/ReVanced/revanced-manager/compare/v1.26.0-dev.1...v1.26.0-dev.2) (2025-10-03)
+
+
+### Bug Fixes
+
+* Migration of keystore, by fixing mislabeling of alias as cn ([#2769](https://github.com/ReVanced/revanced-manager/issues/2769)) ([aeab639](https://github.com/ReVanced/revanced-manager/commit/aeab639b2b09e8bbd2478cfbf5a518586405c0f7))
+
 # app [1.26.0-dev.1](https://github.com/ReVanced/revanced-manager/compare/v1.25.1...v1.26.0-dev.1) (2025-10-02)
 
 
