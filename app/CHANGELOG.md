@@ -1,3 +1,10 @@
+# app [1.26.0-dev.4](https://github.com/ReVanced/revanced-manager/compare/v1.26.0-dev.3...v1.26.0-dev.4) (2025-10-03)
+
+
+### Bug Fixes
+
+* add newlines to debug logs ([4753873](https://github.com/ReVanced/revanced-manager/commit/4753873866b575e2dcb160020df63f63862c8f33))
+
 # app [1.26.0-dev.3](https://github.com/ReVanced/revanced-manager/compare/v1.26.0-dev.2...v1.26.0-dev.3) (2025-10-03)
 
 
