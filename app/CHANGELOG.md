@@ -1,3 +1,10 @@
+# app [1.26.0-dev.5](https://github.com/ReVanced/revanced-manager/compare/v1.26.0-dev.4...v1.26.0-dev.5) (2025-10-03)
+
+
+### Features
+
+* Toggle to use pre-release versions of ReVanced Patches ([08cec67](https://github.com/ReVanced/revanced-manager/commit/08cec674bbbe5297090ac5ee6039569975fbe9e7))
+
 # app [1.26.0-dev.4](https://github.com/ReVanced/revanced-manager/compare/v1.26.0-dev.3...v1.26.0-dev.4) (2025-10-03)
 
 
