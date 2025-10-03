@@ -1,3 +1,15 @@
+# app [1.26.0-dev.6](https://github.com/ReVanced/revanced-manager/compare/v1.26.0-dev.5...v1.26.0-dev.6) (2025-10-03)
+
+
+### Bug Fixes
+
+* Broken version comparison ([c327857](https://github.com/ReVanced/revanced-manager/commit/c3278578237dcddd9e7ab79ee80a02fdeef9604d))
+
+
+### Features
+
+* Open contributor's GitHub profile when clicked ([#2775](https://github.com/ReVanced/revanced-manager/issues/2775)) ([2571cb8](https://github.com/ReVanced/revanced-manager/commit/2571cb8c1108e9c1ed84950f17692c09d66e0556))
+
 # app [1.26.0-dev.5](https://github.com/ReVanced/revanced-manager/compare/v1.26.0-dev.4...v1.26.0-dev.5) (2025-10-03)
 
 
