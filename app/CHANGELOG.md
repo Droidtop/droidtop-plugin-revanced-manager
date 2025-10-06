@@ -1,3 +1,10 @@
+# app [1.26.0-dev.9](https://github.com/ReVanced/revanced-manager/compare/v1.26.0-dev.8...v1.26.0-dev.9) (2025-10-06)
+
+
+### Bug Fixes
+
+* Instantly re-fetch patch bundle on pre-release preference update ([d5671db](https://github.com/ReVanced/revanced-manager/commit/d5671db3a77541c07bbbb4c3baca02f3ba0703f2)), closes [#2784](https://github.com/ReVanced/revanced-manager/issues/2784)
+
 # app [1.26.0-dev.8](https://github.com/ReVanced/revanced-manager/compare/v1.26.0-dev.7...v1.26.0-dev.8) (2025-10-06)
 
 
