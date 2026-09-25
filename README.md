@@ -102,3 +102,26 @@ You can find the documentation for ReVanced Manager [here](/docs).
 ReVanced Manager is licensed under the GPLv3 license. Please see the [license file](LICENSE) for more information.
 [tl;dr](https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3) you may copy, distribute and modify ReVanced Manager as long as you track changes/dates in source files.
 Any modifications to ReVanced Manager must also be made available under the GPL, along with build & install instructions.
+
+## This is a private personal fork
+
+This repo mirrors upstream [ReVanced/revanced-manager](https://github.com/ReVanced/revanced-manager)
+for droidtop plugin work (see `PLUGIN-PLAN.md`). Private, personal use only —
+never mention it in public droidtop docs or repos.
+
+Branches:
+- `upstream-main` tracks upstream's `main` exactly (fast-forward only, synced daily by
+  `.github/workflows/sync-upstream.yml`).
+- `main` is where plugin/integration work happens; the sync workflow merges
+  `upstream-main` into it automatically when there's no conflict, and opens an
+  issue here instead of forcing anything when there is one.
+
+### Licence
+
+ReVanced Manager is GPL-3.0 (see `LICENSE`). GPL-3.0 permits private
+modification and use freely; its copyleft obligations (offering source to
+anyone you *distribute* the software to) are only triggered by distribution.
+A personal build installed on the owner's own device is not distribution, so
+this fork carries no extra obligation beyond keeping `LICENSE` and copyright
+notices intact, which it does. If a modified build were ever shared with
+anyone else, the modified source would need to be offered under GPL-3.0 too.
