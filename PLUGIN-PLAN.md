@@ -1,6 +1,6 @@
 # ReVanced Manager as a droidtop plugin
 
-Private plan. Upstream: https://github.com/ReVanced/revanced-manager
+Plan for ReVanced Manager as a droidtop plugin. Upstream: https://github.com/ReVanced/revanced-manager
 (GPL-3.0). Patches installed Android apps (YouTube etc.) using ReVanced
 patch bundles, via `app.revanced.patcher`.
 
