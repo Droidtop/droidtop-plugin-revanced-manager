@@ -29,7 +29,7 @@ Plan only. There is no droidtop plugin, no release, and no entry in droidtop's c
 
 ## Licence
 
-GPL-3.0, like upstream ReVanced Manager, see [LICENSE](LICENSE).
+GPL-3.0, like upstream ReVanced Manager, see [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 ---
 
