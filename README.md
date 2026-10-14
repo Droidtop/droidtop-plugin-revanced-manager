@@ -1,3 +1,44 @@
+<h1 align="center">ReVanced Manager for droidtop</h1>
+
+<p align="center">
+  <b>A plan to bring ReVanced Manager's patching to droidtop.</b><br>
+  Not built yet. This repository is the fork the plugin will come from.
+</p>
+
+<p align="center">
+  <img alt="For droidtop" src="https://img.shields.io/badge/for-droidtop-2f7bf5?style=flat-square">
+  <a href="LICENSE"><img alt="License: GPL-3.0" src="https://img.shields.io/badge/license-GPL--3.0-blue?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <a href="#what-the-droidtop-plugin-does">What it does</a> ·
+  <a href="#status">Status</a> ·
+  <a href="#licence">Licence</a> ·
+  <a href="#upstream-readme">Upstream README</a>
+</p>
+
+This is a fork of [ReVanced Manager](https://github.com/ReVanced/revanced-manager). The [droidtop](https://github.com/Droidtop/droidtop) plugin does not exist yet. [PLUGIN-PLAN.md](PLUGIN-PLAN.md) describes what it would be.
+
+## What the droidtop plugin does
+
+Nothing yet. The plan is a status tile ("N apps patched, M patches available") and an action on an app's page to re-patch with the latest bundle or check for patch updates. Choosing patches stays in the real app. The plugin would keep the patching core of ReVanced Manager and drop its screens.
+
+## Status
+
+Plan only. There is no droidtop plugin, no release, and no entry in droidtop's catalog.
+
+## Licence
+
+GPL-3.0, like upstream ReVanced Manager, see [LICENSE](LICENSE).
+
+---
+
+## Upstream README
+
+The rest of this page is the README of [ReVanced Manager](https://github.com/ReVanced/revanced-manager), kept as it is.
+
+---
+
 <p align="center">
   <picture>
     <source
