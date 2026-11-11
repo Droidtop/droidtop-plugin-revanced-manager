@@ -1,3 +1,44 @@
+<h1 align="center">ReVanced Manager for droidtop</h1>
+
+<p align="center">
+  <b>A plan to bring ReVanced Manager's patching to droidtop.</b><br>
+  Not built yet. This repository is the fork the plugin will come from.
+</p>
+
+<p align="center">
+  <img alt="For droidtop" src="https://img.shields.io/badge/for-droidtop-2f7bf5?style=flat-square">
+  <a href="LICENSE"><img alt="License: GPL-3.0" src="https://img.shields.io/badge/license-GPL--3.0-blue?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <a href="#what-the-droidtop-plugin-does">What it does</a> ·
+  <a href="#status">Status</a> ·
+  <a href="#licence">Licence</a> ·
+  <a href="#upstream-readme">Upstream README</a>
+</p>
+
+This is a fork of [ReVanced Manager](https://github.com/ReVanced/revanced-manager). The [droidtop](https://github.com/Droidtop/droidtop) plugin does not exist yet. [PLUGIN-PLAN.md](PLUGIN-PLAN.md) describes what it would be.
+
+## What the droidtop plugin does
+
+Nothing yet. The plan is a status tile ("N apps patched, M patches available") and an action on an app's page to re-patch with the latest bundle or check for patch updates. Choosing patches stays in the real app. The plugin would keep the patching core of ReVanced Manager and drop its screens.
+
+## Status
+
+Plan only. There is no droidtop plugin, no release, and no entry in droidtop's catalog.
+
+## Licence
+
+GPL-3.0, like upstream ReVanced Manager, see [LICENSE](LICENSE) and [NOTICE](NOTICE).
+
+---
+
+## Upstream README
+
+The rest of this page is the README of [ReVanced Manager](https://github.com/ReVanced/revanced-manager), kept as it is.
+
+---
+
 <p align="center">
   <picture>
     <source
@@ -102,3 +143,41 @@ You can find the documentation for ReVanced Manager [here](/docs).
 ReVanced Manager is licensed under the GPLv3 license. Please see the [license file](LICENSE) for more information.
 [tl;dr](https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3) you may copy, distribute and modify ReVanced Manager as long as you track changes/dates in source files.
 Any modifications to ReVanced Manager must also be made available under the GPL, along with build & install instructions.
+
+## Fork status
+
+This repo mirrors upstream [ReVanced/revanced-manager](https://github.com/ReVanced/revanced-manager)
+for droidtop plugin work (see `PLUGIN-PLAN.md`). It is an official droidtop
+plugin fork, kept in sync with upstream, not a place for droidtop's own
+patches beyond the `droidtop-plugin/` wrapper.
+
+Branches:
+- `upstream-main` tracks upstream's `main` exactly (fast-forward only, synced daily by
+  `.github/workflows/sync-upstream.yml`).
+- `main` is where plugin/integration work happens; the sync workflow merges
+  `upstream-main` into it automatically when there's no conflict, and opens an
+  issue here instead of forcing anything when there is one.
+
+### Licence
+
+ReVanced Manager is GPL-3.0 (see `LICENSE`). GPL-3.0's copyleft obligation
+is to offer the modified source to anyone the software is distributed to,
+which this public repo already satisfies; `LICENSE` and copyright notices
+stay intact.
+
+## Branches
+
+The owner, 2026-11-05: "ALL plugins should keep the recipe on plugin-core, overlaid onto the release branch when
+needed. That's our standard operation." This repository is a fork, so it has three kinds of branch:
+
+- **`plugin-core`** (the default branch) holds only the droidtop plugin's own recipe: `droidtop-plugin/`, this
+  README, the workflows, the docs and the line declaration in `plugin-line/lines/stable/line.json`. Every change
+  lands here first, through a `ci/` branch. The plugin bundle is built from here.
+- **`upstream-sync`** is the upstream project, untouched. It only ever fast-forwards to the upstream
+  (`.github/workflows/sync-upstream.yml`). A new upstream commit comes back as a `ci/upstream-stable-<sha>` branch
+  that moves the line's pin on `plugin-core`.
+- **`plugin/stable`** is the release branch: the upstream commit `plugin-core` pins, with `plugin-core` written over
+  it. It is generated, never edited: `python3 tools/plugin_line.py compose stable --commit` from
+  Droidtop/droidtop-platforms. `.github/workflows/plugin-line.yml` fails when it differs from that composition.
+
+There is no `main` or `master`.
